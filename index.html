@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAPA GILUT - Puskesmas Ciwidey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+<div id="loading">
+  <div class="tooth">
+    <div class="brush"></div>
+  </div>
+  <p>Memuat SAPA GILUT...</p>
+</div>
+
+<header>
+  <div class="nav">
+<a href="#home" class="logo">
+  <img src="/img/logo.png" alt="Logo SAPA GILUT">
+  <span>SAPA GILUT</span>
+</a>
+
+    <!-- MENU DESKTOP -->
+    <nav class="menu desktop">
+      <a href="#home">Home</a>
+      <a href="#profil">Profil Puskesmas</a>
+      <a href="#tarif">Tarif Pelayanan</a>
+      <a href="#materi">Materi Edukasi</a>
+      <a href="#Layanan Informasi">Layanan Informasi</a>
+      <a href="#footer">Profil Petugas</a>
+    </nav>
+
+    <!-- HAMBURGER (HP) -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- MENU MOBILE -->
+  <nav class="menu mobile" id="mobileMenu">
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#profil" onclick="toggleMenu()">Profil Puskesmas</a>
+    <a href="#tarif" onclick="toggleMenu()">Tarif Pelayanan</a>
+    <a href="#materi" onclick="toggleMenu()">Materi Edukasi</a>
+    <a href="#Layanan Informasif" onclick="toggleMenu()">Layanan Informasi</a>
+    <a href="#footer" onclick="toggleMenu()">Profil Petugas</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h1>SAPA GILUT</h1>
+    <p>Sarana Pembelajaran Kesehatan Gigi dan Mulut
+      <br>Puskesmas Ciwidey</p>
+    <a href="#materi" class="btn">Pelajari Sekarang</a>
+  </div>
+</section>
+
+<section id="profil">
+  <div class="container fade">
+    <h2>Profil Puskesmas Ciwidey</h2>
+    <p class="sub">Puskesmas Ciwidey, berdiri di atas tanah milik Pemerintah Kabupaten Bandung bersertifikat tahun 1979 dengan luas 406 m2, terdiri dari 2 buah bangunan gedung milik Pemerintah Kabupaten Bandung yaitu 1 bangunan puskesmas bertingkat, dengan luas 168,5 m2. Puskesmas Ciwidey terletak di Jalan Babakan Tiga No.66 RT.01 RW.01 Desa Ciwidey Kecamatan Ciwidey, Kabupaten Bandung. Wilayah kerja Puskesmas Ciwidey mencakup tiga desa yaitu Desa Ciwidey, Desa Panyocokan, dan Desa Panundaan.
+ </p>
+
+ 
+</section>
+
+<section id="tarif" style="background:var(--secondary)">
+  <div class="container fade">
+
+    <!-- TOMBOL PEMBUKA -->
+    <button class="btn-tarif" id="btnTarif">
+      Informasi Tarif Pelayanan Gigi dan Mulut Puskesmas Ciwidey
+    </button>
+
+    <!-- KONTEN TARIF (NGUMPET DULU) -->
+    <div class="tarif-box" id="tarifBox">
+
+      <h2>Informasi Tarif Pelayanan</h2>
+      <p class="sub">Berikut adalah tarif pelayanan kesehatan gigi berdasarkan Peraturan Daerah Kab. Bandung No 9 Tahun 2025 tentang Perubahan atas Peraturan Daerah Nomor 10 Tahun 2023 tentang Pajak Daerah dan Retribusi Daerah.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Tindakan Medik Gigi</th>
+            <th>Tarif</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- 1. Cabut Gigi -->
+       <tr class="kategori">
+  <td></td>
+  <td><strong>Cabut Gigi</strong></td>
+  <td></td>
+</tr>
+
+          <tr>
+            <td data-label="No"></td>
+            <td data-label="Tindakan">Gigi Sulung dengan Clor Ethyl</td>
+            <td data-label="Tarif">Rp 30.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Gigi Sulung dengan Anastesi</td>
+            <td data-label="Tarif">Rp 40.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Gigi Tetap</td>
+            <td data-label="Tarif">Rp 70.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Gigi Tetap dengan Penyulit</td>
+            <td data-label="Tarif">Rp 150.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Geraham Terakhir (Normal)</td>
+            <td data-label="Tarif">Rp 150.000</td>
+          </tr>
+
+          <!-- 2. Tumpatan Gigi -->
+          <tr class="kategori">
+  <td></td>
+  <td><strong>Tumpatan Gigi</strong></td>
+  <td></td>
+</tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Glass Ionomer pada Gigi Tetap</td>
+            <td data-label="Tarif">Rp 70.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Glass Ionomer pada Gigi Sulung / Susu</td>
+            <td data-label="Tarif">Rp 50.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Tumpatan dengan Komposit Sinar</td>
+            <td data-label="Tarif">Rp 150.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Pembongkaran Tumpatan</td>
+            <td data-label="Tarif">Rp 50.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Tambalan Sementara</td>
+            <td data-label="Tarif">Rp 22.000</td>
+          </tr>
+
+          <!-- 3. Perawatan -->
+             <tr class="kategori">
+  <td></td>
+  <td><strong>Perawatan</strong></td>
+  <td></td>
+</tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Pengobatan Pulpa dan Jaringan Periapikal</td>
+            <td data-label="Tarif">Rp 40.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Scaling / Pembersihan Karang Gigi per Regio</td>
+            <td data-label="Tarif">Rp 50.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Scaling / Pembersihan Karang Gigi per Rahang</td>
+            <td data-label="Tarif">Rp 100.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Pengobatan Gusi / Periodontal</td>
+            <td data-label="Tarif">Rp 40.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Perawatan Gangren</td>
+            <td data-label="Tarif">Rp 40.000</td>
+          </tr>
+
+          <!-- 4. Lain-lain -->
+             <tr class="kategori">
+  <td></td>
+  <td><strong>Lain-lain</strong></td>
+  <td></td>
+</tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Insisi Abses Intra Oral</td>
+            <td data-label="Tarif">Rp 30.000</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td data-label="Tindakan">Insisi Abses Ekstra Oral</td>
+            <td data-label="Tarif">Rp 50.000</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="materi">
+  <div class="container fade">
+    <h2>Materi Kesehatan Gigi & Mulut</h2>
+    <p class="sub">Materi edukasi untuk meningkatkan pengetahuan masyarakat mengenai kesehatan gigi dan mulut.</p>
+    <div class="grid">
+
+      <div class="card materi" onclick="toggleMateri(this)">
+        <h3>Cara Menyikat Gigi</h3>
+        <p>Menyikat gigi minimal 2 kali sehari dengan teknik yang benar.</p>
+        <div class="detail">
+          <p><b>Langkah-langkah menyikat gigi yang benar:</b></p>
+          <ul>
+            <li>Sikat gigi 2 kali sehari (pagi & malam)</li>
+            <li>Gunakan pasta gigi berfluoride</li>
+            <li>Gerakan memutar dari gusi ke gigi</li>
+            <li>Sikat lidah secara perlahan</li>
+          </ul>
+        <!-- Materi Pdf -->
+     <button class="btn-pdf"
+      onclick="openPdf(event, 'materi/radang.pdf')">
+      📄 Lihat Materi PDF
+    </button>
+
+    <!-- Thumbnail video -->
+   <div class="video-thumb"
+     onclick="openVideo(event, 'https://www.youtube.com/embed/KyQ69FZY-hU')">
+  Tonton Video Edukasi
+</div>
+
+        </div>
+      </div>
+
+      <div class="card materi" onclick="toggleMateri(this)">
+        <h3>Gigi Berlubang</h3>
+        <p>Gigi berlubang adalah gigi yang rusak akibat terkikisnya lapisan terluar gigi (enamel).</p>
+        <div class="detail">
+          <p>Gigi berlubang disebabkan oleh bakteri yang menghasilkan asam dari sisa makanan.</p>
+          <ul>
+            <li>Kurangi makanan manis</li>
+            <li>Rutin periksa ke dokter gigi</li>
+            <li>Menjaga kebersihan mulut</li>
+          </ul>
+           <!-- Materi Pdf -->
+    <button class="btn-pdf"
+      onclick="openPdf(event, 'materi/impaksi-gigi.pdf')">
+      📄 Lihat Materi PDF
+    </button>
+
+    <!-- Thumbnail video -->
+  <div class="video-thumb"
+     onclick="openVideo(event, 'https://www.youtube.com/embed/c7Z-pLkGCJk')">
+  Tonton Video Edukasi
+</div>
+
+        </div>
+      </div>
+
+<div class="card materi" onclick="toggleMateri(this)">
+  <h3>Radang Gusi</h3>
+  <p>Radang gusi atau gingivitis adalah peradangan pada gusi yang ditandai dengan memerahnya gusi di sekitar pangkal gigi.</p>
+
+  <div class="detail">
+    <p>Radang gusi ditandai dengan gusi merah, bengkak, dan mudah berdarah.</p>
+    
+<!-- Materi Pdf -->
+    <button class="btn-pdf"
+      onclick="openPdf(event, 'materi/radang.pdf')">
+      📄 Lihat Materi PDF
+    </button>
+
+    <!-- Thumbnail video -->
+    <div class="video-thumb"
+      onclick="openVideo(event, 'https://www.youtube.com/embed/hOpyBQXc_vU')">
+      Tonton Video Edukasi
+    </div>
+  </div>
+</div>
+
+      <div class="card materi" onclick="toggleMateri(this)">
+        <h3>Impaksi Gigi</h3>
+        <p>Impaksi gigi adalah kondisi ketika gigi tidak dapat tumbuh keluar secara sempurna, baik sebagian maupun seluruhnya, sehingga tetap tertanam di dalam gusi.</p>
+        <div class="detail">
+          <p>Impaksi gigi sering terjadi pada gigi bungsu dan memerlukan tindakan medis.</p>
+      <!-- Materi Pdf -->
+    <button class="btn-pdf"
+      onclick="openPdf(event, 'materi/impaksi.pdf')">
+      📄 Lihat Materi PDF
+    </button>
+
+    <!-- Thumbnail video -->
+    <div class="video-thumb"
+      onclick="openVideo(event, 'https://www.youtube.com/embed/c7Z-pLkGCJk')">
+      Tonton Video Edukasi
+    </div>
+        </div>
+      </div>
+
+      <div class="card materi" onclick="toggleMateri(this)">
+        <h3>Persistensi Gigi</h3>Persistensi gigi adalah kondisi di mana gigi susu tidak tanggal sesuai jadwal normalnya, meskipun gigi permanen sudah mulai tumbuh. 
+        <p></p>
+        <div class="detail">
+          <p>
+Normalnya, gigi susu mulai tanggal pada usia sekitar 6 tahun dan proses ini berlanjut hingga usia 12 atau 13 tahun. Jika gigi susu masih belum tanggal setelah usia tersebut, kondisi ini disebut persistensi gigi. 
+</p>
+          <!-- <ul>
+            <li>Beberapa faktor yang dapat menyebabkan persistensi gigi antara lain:</li>
+            <li>1. Tidak adanya gigi permanen pengganti</li>
+            <li>2. Akar gigi susu menyatu dengan tulang rahang sehingga menghalaangi proses tanggalnya gigi susu</li>
+            <li>3. posisi gigi permanen yang tidak normal</li>
+            <li>4. faktor genetik</li>
+          </ul> -->
+       <!-- Materi Pdf -->
+    <button class="btn-pdf"
+      onclick="openPdf(event, 'materi/impaksi-gigi.pdf')">
+      📄 Lihat Materi PDF
+    </button>
+
+    <!-- Thumbnail video -->
+    <div class="video-thumb"
+      onclick="openVideo(event, 'https://www.youtube.com/embed/hOpyBQXc_vU')">
+      Tonton Video Edukasi
+    </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="pdfOverlay" class="pdf-overlay" onclick="closePdf()">
+  <div class="pdf-box" onclick="event.stopPropagation()">
+    <button class="pdf-close" onclick="closePdf()">✕</button>
+    <embed id="pdfViewer" type="application/pdf">
+  </div>
+</div>
+
+
+<!-- MODAL VIDEO -->
+<div id="videoModal" class="video-modal" onclick="closeVideo()">
+  <div class="video-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closeVideo()">✖</span>
+    <iframe id="videoFrame"
+      src=""
+      allowfullscreen
+      allow="autoplay">
+    </iframe>
+  </div>
+</div>
+
+
+
+
+
+
+<section class="footer-profile" id="footer">
+    <div class="profile-container">
+        
+        <div class="profile-content">
+            <h1 class="p-title">Hi! Saya <span class="p-yellow">Rena Andela, A.Md.Kes</span></h1>
+            <h2 class="p-subtitle">Terapis Gigi dan Mulut</h2>
+            <p class="p-desc">
+                Saya adalah seorang Terapis Gigi dan Mulut di Puskesmas Ciwidey. Sebagai bagian dari inovasi aktualisasi Pelatihan Dasar CPNS Tahun 2026, Saya mengembangkan website SAPA GILUT (Sarana Pembelajaran Kesehatan Gigi dan Mulut) sebagai media edukasi interaktif untuk masyarakat dengan tujuan mempermudah akses informasi kesehatan gigi dan mulut bagi masyarakat serta mendukung peningkatan kualitas pelayanan publik di Puskesmas Ciwidey.
+            </p>
+            <div class="p-buttons">
+                <a href="#" class="p-btn p-btn-fill">Layanan Informasi</a>
+                <a href="#" class="p-btn p-btn-outline">Home</a>
+            </div>
+        </div>
+
+        <div class="profile-visual">
+            <div class="p-blob"></div>
+            <img src="img/profil.png" alt="Rena andela" class="p-img">
+        </div>
+
+    </div>
+    
+    <div class="p-copyright">
+        © 2026 Rena andela, A.Md.Kes | Puskesmas Ciwidey.
+    </div>
+</section>
+
+
+<!-- <footer>
+  <p>© 2026 SAPA GILUT | Puskesmas Ciwidey</p>
+</footer> -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
