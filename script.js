@@ -117,3 +117,65 @@ window.addEventListener('load', () => {
     setTimeout(() => loader.style.display = 'none', 500);
   }, 1000); // loading tampil minimal 1 detik
 });
+const csBtn = document.getElementById("csBtn");
+const csPanel = document.getElementById("csPanel");
+const form = document.getElementById("feedbackForm");
+const successMsg = document.getElementById("successMsg");
+
+// Toggle panel saat klik tombol headset
+csBtn.addEventListener("click", () => {
+    csPanel.classList.toggle("active");
+});
+
+// ===============================
+// GOOGLE FORM
+const FORM_URL =
+"https://docs.google.com/forms/d/e/1FAIpQLSdA1fH_-YgkF-Z3sjJ8d7Ms5yCt1qmse4wQ8ZyFrsRLx3eUaw/formResponse";
+
+const ENTRY_NAMA = "entry.1570316407";
+const ENTRY_PESAN = "entry.1097598092";
+
+// Submit form
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nama = form.nama.value.trim();
+    const pesan = form.pesan.value.trim();
+
+    if (!nama || !pesan) {
+        alert("Nama dan Saran/Kritik wajib diisi!");
+        return;
+    }
+
+    const data = new URLSearchParams();
+    data.append(ENTRY_NAMA, nama);
+    data.append(ENTRY_PESAN, pesan);
+
+    fetch(FORM_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: data.toString()
+    });
+
+    form.reset();
+    successMsg.style.display = "block";
+
+    setTimeout(() => {
+        successMsg.style.display = "none";
+        csPanel.classList.remove("active");
+    }, 3000);
+});
+
+// ===============================
+// CLOSE PANEL SAAT KLIK DI LUAR PANEL
+document.addEventListener("click", function(e) {
+    // Jika panel aktif, dan klik bukan di panel atau tombol csBtn
+    if (
+        csPanel.classList.contains("active") &&
+        !csPanel.contains(e.target) &&
+        !csBtn.contains(e.target)
+    ) {
+        csPanel.classList.remove("active");
+    }
+});

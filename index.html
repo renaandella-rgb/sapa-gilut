@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAPA GILUT - Puskesmas Ciwidey</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
 <header>
   <div class="nav">
 <a href="#home" class="logo">
-  <img src="/img/logo.png" alt="Logo SAPA GILUT">
+  <img src="img/logo.png" alt="Logo SAPA GILUT">
   <span>SAPA GILUT</span>
 </a>
 
@@ -380,14 +381,14 @@ Normalnya, gigi susu mulai tanggal pada usia sekitar 6 tahun dan proses ini berl
                 Saya adalah seorang Terapis Gigi dan Mulut di Puskesmas Ciwidey. Sebagai bagian dari inovasi aktualisasi Pelatihan Dasar CPNS Tahun 2026, Saya mengembangkan website SAPA GILUT (Sarana Pembelajaran Kesehatan Gigi dan Mulut) sebagai media edukasi interaktif untuk masyarakat dengan tujuan mempermudah akses informasi kesehatan gigi dan mulut bagi masyarakat serta mendukung peningkatan kualitas pelayanan publik di Puskesmas Ciwidey.
             </p>
             <div class="p-buttons">
-                <a href="#" class="p-btn p-btn-fill">Layanan Informasi</a>
+                <!-- <a href="#csPanel" class="p-btn p-btn-fill">Layanan Informasi</a> -->
                 <a href="#" class="p-btn p-btn-outline">Home</a>
             </div>
         </div>
 
         <div class="profile-visual">
             <div class="p-blob"></div>
-            <img src="img/profil.png" alt="Rena andela" class="p-img">
+            <img src="img/profil1.png" alt="Rena andela" class="p-img">
         </div>
 
     </div>
@@ -396,6 +397,47 @@ Normalnya, gigi susu mulai tanggal pada usia sekitar 6 tahun dan proses ini berl
         © 2026 Rena andela, A.Md.Kes | Puskesmas Ciwidey.
     </div>
 </section>
+
+
+<!-- BUTTON CUSTOMER SERVICE -->
+<!-- BUTTON -->
+<div class="cs-btn" id="csBtn">
+    <i class="fa-solid fa-headset"></i>
+</div>
+
+<!-- PANEL -->
+<div class="cs-panel" id="csPanel">
+    <h3>Layanan Informasi</h3>
+
+    <div class="cs-social">
+        <a href="https://wa.me/6282116197720" target="_blank">
+            <i class="fab fa-whatsapp" style="color:green"></i> WhatsApp
+        </a>
+        <a href="https://www.instagram.com/pkmciwidey_kab.bandung?igsh=MWlxOXducHphZzdpMA==" target="_blank">
+            <i class="fab fa-instagram" style="color:#E1306C"></i> Instagram
+        </a>
+    </div>
+
+    <hr>
+
+    <h4>Saran & Kritik</h4>
+
+    <form id="feedbackForm">
+        <input type="text" name="nama" placeholder="Nama Anda" required>
+        <textarea name="pesan" placeholder="Saran / Kritik Anda" required></textarea>
+        <button type="submit">Kirim</button>
+    </form>
+
+    <div class="success" id="successMsg">
+        Terima kasih atas masukannya 🙏
+    </div>
+</div>
+
+
+    <div class="success" id="successMsg">
+        Terima kasih atas saran & kritiknya 🙏
+    </div>
+</div>
 
 
 <!-- <footer>
