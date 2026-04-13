@@ -407,46 +407,30 @@ Normalnya, gigi susu mulai tanggal pada usia sekitar 6 tahun dan proses ini berl
 </section>
 
 
-<!-- BUTTON CUSTOMER SERVICE -->
 <!-- BUTTON -->
-<div class="cs-btn" id="csBtn">
-    <i class="fa-solid fa-headset"></i>
+<div class="cs-button" onclick="togglePanel()">
+    <i data-feather="headphones"></i>
 </div>
 
 <!-- PANEL -->
 <div class="cs-panel" id="csPanel">
     <h3>Layanan Informasi</h3>
 
-    <div class="cs-social">
-        <a href="https://wa.me/6282116197720" target="_blank">
-            <i class="fab fa-whatsapp" style="color:green"></i> WhatsApp
-        </a>
-        <a href="https://www.instagram.com/pkmciwidey_kab.bandung?igsh=MWlxOXducHphZzdpMA==" target="_blank">
-            <i class="fab fa-instagram" style="color:#E1306C"></i> Instagram
-        </a>
-    </div>
+    <a href="https://wa.me/628XXXXXXXXXX" target="_blank" class="cs-link wa">WhatsApp</a>
+    <a href="https://instagram.com/username_kamu" target="_blank" class="cs-link ig">Instagram</a>
 
     <hr>
 
     <h4>Saran & Kritik</h4>
 
     <form id="feedbackForm">
-        <input type="text" name="nama" placeholder="Nama Anda" required>
-        <textarea name="pesan" placeholder="Saran / Kritik Anda" required></textarea>
+        <input type="text" id="nama" placeholder="Nama Anda" required>
+        <textarea id="pesan" placeholder="Saran / Kritik Anda" required></textarea>
         <button type="submit">Kirim</button>
     </form>
 
-    <div class="success" id="successMsg">
-        Terima kasih atas masukannya 🙏
-    </div>
+    <p id="status"></p>
 </div>
-
-
-    <div class="success" id="successMsg">
-        Terima kasih atas saran & kritiknya 🙏
-    </div>
-</div>
-
 
 <!-- <footer>
   <p>© 2026 SAPA GILUT | Puskesmas Ciwidey</p>
