@@ -128,45 +128,39 @@ csBtn.addEventListener("click", () => {
 });
 
 // ===============================
-// GOOGLE FORM
-const FORM_URL =
-"https://docs.google.com/forms/d/e/1FAIpQLSdA1fH_-YgkF-Z3sjJ8d7Ms5yCt1qmse4wQ8ZyFrsRLx3eUaw/formResponse";
+// aktifkan icon
+feather.replace();
 
-const ENTRY_NAMA = "entry.1570316407";
-const ENTRY_PESAN = "entry.1097598092";
+// toggle panel
+function togglePanel() {
+    let panel = document.getElementById("csPanel");
+    panel.style.display = (panel.style.display === "block") ? "none" : "block";
+}
 
-// Submit form
-form.addEventListener("submit", function(e) {
+// kirim ke google form
+document.getElementById("feedbackForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const nama = form.nama.value.trim();
-    const pesan = form.pesan.value.trim();
+    let nama = document.getElementById("nama").value;
+    let pesan = document.getElementById("pesan").value;
 
-    if (!nama || !pesan) {
-        alert("Nama dan Saran/Kritik wajib diisi!");
-        return;
-    }
+    let url = "https://docs.google.com/forms/d/e/1FAIpQLScV497RGT0r6phdbnNpjoNC5bbbksY88rGJQ8E_fVuTn9IgjQ/formResponse";
 
-    const data = new URLSearchParams();
-    data.append(ENTRY_NAMA, nama);
-    data.append(ENTRY_PESAN, pesan);
+    let formData = new FormData();
+    formData.append("entry.2029582354", nama);
+    formData.append("entry.1616575905", pesan);
 
-    fetch(FORM_URL, {
+    fetch(url, {
         method: "POST",
         mode: "no-cors",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: data.toString()
+        body: formData
+    }).then(() => {
+        document.getElementById("status").innerHTML = "✅ Terkirim!";
+        document.getElementById("feedbackForm").reset();
+    }).catch(() => {
+        document.getElementById("status").innerHTML = "❌ Gagal!";
     });
-
-    form.reset();
-    successMsg.style.display = "block";
-
-    setTimeout(() => {
-        successMsg.style.display = "none";
-        csPanel.classList.remove("active");
-    }, 3000);
 });
-
 // ===============================
 // CLOSE PANEL SAAT KLIK DI LUAR PANEL
 document.addEventListener("click", function(e) {
