@@ -108,16 +108,16 @@ function closeVideo() {
   frame.src = ""; // stop video
 }
 
-window.addEventListener('load', () => {
-  // Tambah efek delay agar animasi terlihat
-  setTimeout(() => {
-    const loader = document.getElementById('loading');
-    loader.style.opacity = '0';
-    loader.style.transition = 'opacity 0.5s ease';
-    setTimeout(() => loader.style.display = 'none', 500);
-  }, 1000); // loading tampil minimal 1 detik
-});
-const csBtn = document.getElementById("csBtn");
+// window.addEventListener('load', () => {
+//   // Tambah efek delay agar animasi terlihat
+//   setTimeout(() => {
+//     const loader = document.getElementById('loading');
+//     loader.style.opacity = '0';
+//     loader.style.transition = 'opacity 0.5s ease';
+//     setTimeout(() => loader.style.display = 'none', 500);
+//   }, 1000); // loading tampil minimal 1 detik
+// });
+const csBtn = document.querySelector(".cs-button");
 const csPanel = document.getElementById("csPanel");
 const form = document.getElementById("feedbackForm");
 const successMsg = document.getElementById("successMsg");
@@ -172,4 +172,13 @@ document.addEventListener("click", function(e) {
     ) {
         csPanel.classList.remove("active");
     }
+});
+
+// PRELOADER
+window.addEventListener("load", function () {
+    const loader = document.getElementById("preloader");
+
+    setTimeout(() => {
+        loader.classList.add("hide");
+    }, 1200); // durasi loading (bisa kamu ubah)
 });
